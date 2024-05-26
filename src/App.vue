@@ -1,12 +1,16 @@
 <template>
-  <div class="app">
-    <Tweet />
+  <div class="app" v-for="tweet in tweets">
+    
+    <Tweet :tweet="tweet" ></Tweet>
+
+
   </div>
 </template>
 
 <script setup>
   import { ref } from 'vue';
   import Tweet from './components/Tweet.vue';
+
 
   const tweets = ref([
     {
